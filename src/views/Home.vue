@@ -1,11 +1,13 @@
 <template>
   <div class="home">
+    <InputForm />
     <ResultList :repos="repos" />
   </div>
 </template>
 
 <script lang="ts">
 // @ is an alias to /src
+import InputForm from "@/components/InputForm.vue";
 import ResultList from "@/components/ResultList.vue";
 import { Component, Vue } from "vue-property-decorator";
 import { vxm } from "@/store";
@@ -13,7 +15,8 @@ import { Repos } from "../store/modules/repos";
 
 @Component({
   components: {
-    ResultList
+    ResultList,
+    InputForm
   }
 })
 export default class Home extends Vue {
