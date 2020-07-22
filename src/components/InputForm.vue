@@ -32,10 +32,13 @@ import "../assets/style.css";
 
 @Component
 export default class InputForm extends Vue {
-  private account?: string = "";
+  private account?: string = "higuuu";
   private accountRules = [
     (value?: string) => !!value || "Account Name is required"
   ];
+  created() {
+    this.submit(this.account);
+  }
   @Emit("submit") submit(account?: string) {
     return account;
   }
