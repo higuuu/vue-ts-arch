@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <InputForm />
+    <InputForm @submit="submit" />
     <ResultList :repos="repos" />
   </div>
 </template>
@@ -25,5 +25,9 @@ export default class Home extends Vue {
     this.repos = vxm.repos.allRepos;
   }
   private repos: Repos[] = vxm.repos.allRepos;
+  private async submit(account: string) {
+    await vxm.repos.getRepos(account);
+    this.repos = vxm.repos.allRepos;
+  }
 }
 </script>

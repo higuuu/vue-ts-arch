@@ -13,7 +13,7 @@
           </v-form>
         </v-col>
         <v-col cols="3">
-          <v-btn>
+          <v-btn @click="submit(account)">
             送信
           </v-btn>
         </v-col>
@@ -23,12 +23,15 @@
 </template>
 
 <script lang="ts">
-import { Vue, Component } from "vue-property-decorator";
+import { Vue, Component, Emit } from "vue-property-decorator";
 import "../assets/style.css";
 
 @Component
 export default class InputForm extends Vue {
   private account?: string = "";
   private accountRules = [() => !!this.account || "Account Name is required"];
+  @Emit("submit") submit(account?: string) {
+    return account;
+  }
 }
 </script>
