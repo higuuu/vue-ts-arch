@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <ResultList :path="['url']" :title="['title']" :subtitle="['sub']" />
+    <ResultList :repos="repos" />
   </div>
 </template>
 
@@ -9,6 +9,7 @@
 import ResultList from "@/components/ResultList.vue";
 import { Component, Vue } from "vue-property-decorator";
 import { vxm } from "@/store";
+import { Repos } from "../store/modules/repos";
 
 @Component({
   components: {
@@ -21,6 +22,8 @@ export default class Home extends Vue {
     await vxm.repos.getRepos("higuuu");
     console.log(1);
     console.log("home", vxm.repos.allRepos);
+    this.repos = vxm.repos.allRepos;
   }
+  private repos: Repos[] = vxm.repos.allRepos;
 }
 </script>
