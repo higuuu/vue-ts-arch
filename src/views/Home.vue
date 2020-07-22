@@ -20,9 +20,8 @@ import { Repos } from "../store/modules/repos";
   }
 })
 export default class Home extends Vue {
-  async created() {
-    await vxm.repos.getRepos("higuuu");
-    this.repos = vxm.repos.allRepos;
+  created() {
+    this.submit;
   }
   private repos: Repos[] = vxm.repos.allRepos;
   private async submit(account: string) {
