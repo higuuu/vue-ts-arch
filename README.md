@@ -1,5 +1,7 @@
 # vue-js-arch
 
+<img width="1157" alt="スクリーンショット 2020-08-24 14 50 30" src="https://user-images.githubusercontent.com/42379013/91008552-949b5480-e619-11ea-94bb-b8ceacf5e050.png">
+
 ## Project setup
 ```
 npm install
