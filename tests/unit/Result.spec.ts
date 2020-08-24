@@ -6,7 +6,7 @@ const localVue = createLocalVue();
 localVue.use(Vuetify);
 
 describe("components/ResultList test", () => {
-  it("has-errorがtrueならエラーメッセージが表示される", () => {
+  it("ResultListが空ならエラーメッセージが表示される", () => {
     const wrapper = mount(ResultList, {
       localVue,
       propsData: {
