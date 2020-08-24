@@ -1,14 +1,13 @@
 <template>
   <v-card class="result-list-size">
-    <v-card-title>
-      リポジトリ一覧
-    </v-card-title>
-    <v-card-subtitle>
-      クリックするとgithubに遷移します
-    </v-card-subtitle>
-    <v-alert v-if="repos.length === 0" outlined type="error">
-      リポジトリがありません。アカウント名が間違っていないか確認してください。
-    </v-alert>
+    <v-card-title>リポジトリ一覧</v-card-title>
+    <v-card-subtitle>クリックするとgithubに遷移します</v-card-subtitle>
+    <v-alert
+      id="alert_message"
+      v-if="repos.length === 0"
+      outlined
+      type="error"
+    >リポジトリがありません。アカウント名が間違っていないか確認してください。</v-alert>
     <v-list>
       <v-list-item-group>
         <v-list-item
