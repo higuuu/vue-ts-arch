@@ -14,6 +14,6 @@ describe("components/ResultList test", () => {
       }
     });
     const alert = wrapper.find("#alert_message");
-    expect(alert.isVisible()).toBe(true);
+    expect(alert.exists()).toBe(true);
   });
 });
